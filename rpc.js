@@ -1,8 +1,9 @@
-let compChoice;
-const computerPlay = (compChoice) => {
+
+const computerPlay = () => {
+    let compChoice;
     const randomNumber = Math.floor((Math.random()*3)) + 1;
      if (randomNumber == 1) {
-        compChoice = 'Rock';
+        compChoice = 'rock';
     } else if (randomNumber == 2) {
         compChoice = 'paper';
     } else if (randomNumber == 3) {
@@ -12,4 +13,20 @@ const computerPlay = (compChoice) => {
     }
     return compChoice;
 }
-console.log(computerPlay(compChoice));
+const personPlay = () => {
+    let personChoice = prompt('Enter your choice: ');
+    personChoice = personChoice.toLowerCase();
+    return personChoice;
+}
+
+const playRound = (cChoice, pChoice) => {
+    console.log(cChoice);
+    console.log(pChoice);
+}
+
+
+
+
+cChoice = computerPlay();
+pChoice = personPlay();
+console.log(playRound(cChoice, pChoice));
