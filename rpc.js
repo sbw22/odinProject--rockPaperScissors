@@ -41,13 +41,14 @@ const playRound = () => {
 }
 
 const game = () => {
-    for (let i =0; i < 5; i++) {
+    const numOfGames = prompt('How many rounds do you want?');
+    for (let i =0; i < numOfGames; i++) {
         console.log(playRound());
     }
 }
 
 
-console.log(game());
+game();
 
 
 
