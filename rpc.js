@@ -19,7 +19,10 @@ const personPlay = () => {
     return personChoice;
 }
 
-const playRound = (cChoice, pChoice) => {
+const playRound = () => {
+    const pChoice = personPlay();
+    const cChoice = computerPlay();
+
     if (cChoice == 'rock' && pChoice == 'scissors'){
         return 'You lose! Rock beats Scissors!';
     } else if (cChoice == 'paper' && pChoice == 'rock'){
@@ -37,9 +40,14 @@ const playRound = (cChoice, pChoice) => {
     }
 }
 
+const game = () => {
+    for (let i =0; i < 5; i++) {
+        console.log(playRound());
+    }
+}
+
+
+console.log(game());
 
 
 
-cChoice = computerPlay();
-pChoice = personPlay();
-console.log(playRound(cChoice, pChoice));
