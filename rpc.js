@@ -20,8 +20,21 @@ const personPlay = () => {
 }
 
 const playRound = (cChoice, pChoice) => {
-    console.log(cChoice);
-    console.log(pChoice);
+    if (cChoice == 'rock' && pChoice == 'scissors'){
+        return 'You lose! Rock beats Scissors!';
+    } else if (cChoice == 'paper' && pChoice == 'rock'){
+        return 'You lose! Paper beats Rock!';
+    } else if (cChoice == 'scissors' && pChoice == 'paper'){
+        return 'You lose! Scissors beats Rock!';
+    } else if (cChoice == 'rock' && pChoice == 'paper'){
+        return 'You win! Paper beats Rock!';
+    } else if (cChoice == 'paper' && pChoice == 'scissors'){
+        return 'You win! Scissors beats Paper!';
+    } else if (cChoice == 'scissors' && pChoice == 'rock'){
+        return 'You win! Rock beats Scissors!';
+    } else {
+        return 'tie!';
+    }
 }
 
 
